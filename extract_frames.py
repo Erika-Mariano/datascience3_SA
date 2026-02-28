@@ -45,22 +45,20 @@ def extract_frames(video_path, output_folder, fps_rate=1):
 # YOUR VIDEO PATHS - edit only if your filenames change
 # ============================================================
 
-base = r"C:\Users\Erika\Desktop\SA1 Data Sci"
-
 videos = [
     (
-        os.path.join(base, "Location1_Morning.mp4"),
-        os.path.join(base, "frames", "Location1_Morning"),
+        os.path.join("Location1_Morning.mp4"),
+        os.path.join("frames", "Location1_Morning"),
         1  # 1 fps
     ),
     (
-        os.path.join(base, "Location1_Afternoon.mov"),
-        os.path.join(base, "frames", "Location1_Afternoon"),
+        os.path.join("Location1_Afternoon.mov"),
+        os.path.join("frames", "Location1_Afternoon"),
         1  # 1 fps
     ),
     (
-        os.path.join(base, "Location2_Afternoon.mov"),
-        os.path.join(base, "frames", "Location2_Afternoon"),
+        os.path.join("Location2_Afternoon.mov"),
+        os.path.join("frames", "Location2_Afternoon"),
         1  # 1 fps
     ),
 ]
@@ -81,5 +79,5 @@ print("=" * 55)
 print(f"ALL DONE!")
 print(f"Total frames extracted: {total}")
 print(f"Estimated after 3x augmentation in Roboflow: ~{total * 3}")
-print(f"\nFrames saved to: {base}\\frames\\")
+print(f"\nFrames saved to: {os.path.abspath('frames')}")
 print("=" * 55)

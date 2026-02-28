@@ -39,22 +39,20 @@ def extract_frames(video_path, output_folder, fps_rate=5):
     return saved
 
 
-base = r"C:\Users\Erika\Desktop\SA1 Data Sci"
-
 videos = [
     (
-        os.path.join(base, "Location1_Morning.mp4"),
-        os.path.join(base, "frames_5fps", "Location1_Morning"),
+        os.path.join("Location1_Morning.mp4"),
+        os.path.join( "frames_5fps", "Location1_Morning"),
         5
     ),
     (
-        os.path.join(base, "Location1_Afternoon.mov"),
-        os.path.join(base, "frames_5fps", "Location1_Afternoon"),
+        os.path.join("Location1_Afternoon.mov"),
+        os.path.join("frames_5fps", "Location1_Afternoon"),
         5
     ),
     (
-        os.path.join(base, "Location2_Afternoon.mov"),
-        os.path.join(base, "frames_5fps", "Location2_Afternoon"),
+        os.path.join("Location2_Afternoon.mov"),
+        os.path.join("frames_5fps", "Location2_Afternoon"),
         5
     ),
 ]
